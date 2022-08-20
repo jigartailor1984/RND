@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/SourceGeneratorSamples/CommunityToolKitCoreDemo/.vs
+/SourceGeneratorSamples/CommunityToolKitCoreDemo/CommunityToolKitCoreDemo/bin/Debug/net6.0-windows
+/SourceGeneratorSamples/CommunityToolKitCoreDemo/CommunityToolKitCoreDemo/obj
+/SourceGeneratorSamples/CommunityToolKitDemo/.vs/CommunityToolKitDemo
+/SourceGeneratorSamples/CommunityToolKitDemo/CommunityToolKitDemo/bin/Debug
+/SourceGeneratorSamples/CommunityToolKitDemo/CommunityToolKitDemo/obj

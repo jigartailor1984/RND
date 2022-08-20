@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<ErrorReport>prompt</ErrorReport>
+		<LangVersion>10.0</LangVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+	</ItemGroup>
+	<Target Name="RemoveDuplicateAnalyzers" BeforeTargets="CoreCompile">
+		<!-- Work around https://github.com/dotnet/wpf/issues/6792 -->
+
+		<ItemGroup>
+			<FilteredAnalyzer Include="@(Analyzer->Distinct())" />
+			<Analyzer Remove="@(Analyzer)" />
+			<Analyzer Include="@(FilteredAnalyzer)" />
+		</ItemGroup>
+	</Target>
+</Project>
