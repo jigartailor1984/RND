@@ -1,2 +1,3 @@
-# RND
-Repository Contains all RND projects
+# Samples Projects
+
+Repository Contains all RND Sample projects
