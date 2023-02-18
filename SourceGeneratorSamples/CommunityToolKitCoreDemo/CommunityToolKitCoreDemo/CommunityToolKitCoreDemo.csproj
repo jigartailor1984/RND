@@ -7,7 +7,7 @@
 		<UseWPF>true</UseWPF>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<ErrorReport>prompt</ErrorReport>
-		<LangVersion>10.0</LangVersion>
+		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
