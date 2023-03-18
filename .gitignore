@@ -3,9 +3,10 @@
 ################################################################################
 
 /SourceGeneratorSamples/CommunityToolKitCoreDemo/.vs
-/SourceGeneratorSamples/CommunityToolKitCoreDemo/CommunityToolKitCoreDemo/bin/Debug/net6.0-windows
+/SourceGeneratorSamples/CommunityToolKitCoreDemo/CommunityToolKitCoreDemo/bin
 /SourceGeneratorSamples/CommunityToolKitCoreDemo/CommunityToolKitCoreDemo/obj
 /SourceGeneratorSamples/CommunityToolKitDemo/.vs/CommunityToolKitDemo
-/SourceGeneratorSamples/CommunityToolKitDemo/CommunityToolKitDemo/bin/Debug
+/SourceGeneratorSamples/CommunityToolKitDemo/CommunityToolKitDemo/bin
 /SourceGeneratorSamples/CommunityToolKitDemo/CommunityToolKitDemo/obj
-/SourceGeneratorSamples/CommunityToolKitCoreDemo/CommunityToolKitCoreDemo/bin/Debug/net481
+/SourceGeneratorSamples/CommunityToolKitCoreDemo/CommunityToolKitCoreDemo/bin
+.vscode
