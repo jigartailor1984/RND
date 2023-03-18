@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CommunityToolKitCoreDemo.ViewModels;
 
 namespace CommunityToolKitCoreDemo
 {
@@ -20,9 +21,10 @@ namespace CommunityToolKitCoreDemo
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(MainViewModel viewModel)
         {
             InitializeComponent();
+            this.DataContext = viewModel;
         }
     }
 }

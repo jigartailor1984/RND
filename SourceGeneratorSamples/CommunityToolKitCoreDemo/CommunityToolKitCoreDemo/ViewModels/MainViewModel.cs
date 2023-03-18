@@ -7,24 +7,50 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace CommunityToolKitCoreDemo.ViewModels
 {
     public partial class MainViewModel : ObservableValidator
     {
-        int _counter = 0;
         [ObservableProperty]
-        string _text = string.Empty;
+        [NotifyDataErrorInfo]
+        [Required]
+        [MinLength(2)]
+        [MaxLength(100)]
+        private string? firstName;
+
+        [ObservableProperty]
+        [NotifyDataErrorInfo]
+        [Required]
+        [MinLength(2)]
+        [MaxLength(100)]
+        private string? lastName;
+
+        [ObservableProperty]
+        [NotifyDataErrorInfo]
+        [Required]
+        [EmailAddress]
+        private string? email;
+
+        [ObservableProperty]
+        [NotifyDataErrorInfo]
+        [Required]
+        [Phone()]
+        private string? phoneNumber;
 
         [RelayCommand]
-        void Add()
-        {
-
-            Text = $"Add clicked {++_counter} Times!!";
-        }
-        public MainViewModel()
-        {
-            Text = "Click Me!";
+        void Submit()
+        { 
+            ValidateAllProperties();
+            if(this.HasErrors)
+            {
+                MessageBox.Show("Validation failed");
+            }
+            else
+            {
+                MessageBox.Show("Submition successfull.");
+            }
         }
     }
 }

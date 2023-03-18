@@ -7,11 +7,15 @@
         xmlns:vm="clr-namespace:CommunityToolKitCoreDemo.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Window.DataContext>
-        <vm:MainViewModel/>
-    </Window.DataContext>
-    <Grid>
-        <Button HorizontalAlignment="Center" VerticalAlignment="Center" 
-                Content="{Binding Text}" Command="{Binding AddCommand}"/>
-    </Grid>
+    <StackPanel Orientation="Vertical">
+        <TextBlock Text="First Name"/>
+        <TextBox Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=True,NotifyOnValidationError=True}"/>
+        <TextBlock Text="Last Name"/>
+        <TextBox Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=True,NotifyOnValidationError=True}"/>
+        <TextBlock Text="Email"/>
+        <TextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=True,NotifyOnValidationError=True}"/>
+        <TextBlock Text="Phone Number"/>
+        <TextBox Text="{Binding PhoneNumber, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=True,NotifyOnValidationError=True}"/>
+        <Button Content="Submit" Command="{Binding SubmitCommand}"/>
+    </StackPanel>
 </Window>
